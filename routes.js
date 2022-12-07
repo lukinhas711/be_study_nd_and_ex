@@ -1,6 +1,9 @@
-import express from "express";
+const express = require("express");
 const routes = express.Router()
 
 
+const homeController  = require("./controllers/homeController.js");
 
-export default routes
+routes.get('/', homeController.initialPage)
+
+module.exports = routes
